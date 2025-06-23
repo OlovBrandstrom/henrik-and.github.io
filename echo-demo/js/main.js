@@ -1281,6 +1281,8 @@ async function startGdm() {
     }
     const [audioTrack] = gdmStream.getAudioTracks();
     if (audioTrack) {
+      const capabilities = audioTrack.getCapabilities();
+      logi('[gDM] audioTrack.getCapabilities: ', capabilities);
       const settings = audioTrack.getSettings();
       logi('[gDM] audioTrack.getSettings: ', settings);
       printGdmAudioSettings(settings, options);
