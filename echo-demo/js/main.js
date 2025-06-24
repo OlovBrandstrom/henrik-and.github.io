@@ -938,6 +938,9 @@ async function startGum(index) {
     // MediaDevices: getUserMedia()
     gumStreams[index] = await navigator.mediaDevices.getUserMedia(constraints);
     const [audioTrack] = gumStreams[index].getAudioTracks();
+
+    const capabilities = audioTrack.getCapabilities();
+    logi('[gUM] audioTrack.getCapabilities: ', capabilities);
  
     const settings = audioTrack.getSettings();
     printGumAudioSettings(settings, index);
