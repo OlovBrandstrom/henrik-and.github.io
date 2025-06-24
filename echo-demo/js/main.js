@@ -943,6 +943,7 @@ async function startGum(index) {
     logi('[gUM] audioTrack.getCapabilities: ', capabilities);
  
     const settings = audioTrack.getSettings();
+      logi('[gUM] audioTrack.getSettings: ', settings);
     printGumAudioSettings(settings, index);
     printGumAudioTrack(audioTrack, index);
     // Store the currently selected and active (unique) microphone ID.
